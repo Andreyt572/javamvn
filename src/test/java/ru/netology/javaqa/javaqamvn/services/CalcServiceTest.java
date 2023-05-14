@@ -17,7 +17,7 @@ public class CalcServiceTest {
 
         int actual = service.calculate(income, expense, threshold);
 
-        Assertions.assertEquals(income, actual);
+        Assertions.assertEquals(money, actual);
 
 
     }
