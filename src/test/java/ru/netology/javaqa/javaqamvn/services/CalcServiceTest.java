@@ -15,9 +15,11 @@ public class CalcServiceTest {
     public void testIsThereEnoughMoney(int income, int expense, int threshold){
         CalcService service = new CalcService();
 
+        int expected = 0;
+
         int actual = service.calculate(income, expense, threshold);
 
-        Assertions.assertEquals(money, actual);
+        Assertions.assertEquals(expected, actual);
 
 
     }
