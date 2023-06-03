@@ -3,16 +3,17 @@ package ru.netology.javaqa.javaqamvn.services;
 public class CalcService {
 
     public int calculate(int income, int expense, int threshold) {
-        int count = 0; // счётчик месяцев отдыха
+        int counter = 0; // счётчик месяцев отдыха
         int money = 0; //количество денег на счету
-        for (int month = 0; month < 12; month++) {
+        int i;
+        for (i = 0; i < 12; i++)
             if (money >= threshold) { // можем ли отдыхать?
-                count++; // увеличиваем счётчик месяцев отдыха
-                money = (money - expense)/ 3;
+                money = money - expense;
+                money = money / 3;
+                counter++;
             } else {
-                money = income - expense;
+                money = money + income - expense;
             }
-        }
-        return count;
+        return counter;
     }
 }
